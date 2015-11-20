@@ -1,0 +1,35 @@
+﻿<Window x:Class="LogisticsGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LogisticsGame"
+        xmlns:vm="clr-namespace:LogisticsGame.ViewModels"
+        xmlns:view="clr-namespace:LogisticsGame.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.DataContext>
+        <vm:ApplicationViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type vm:StepOneViewModel}">
+            <view:StepOnePage/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:StepTwoViewModel}">
+            <view:StepTwoPage/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:StepThreeViewModel}">
+            <view:StepThreePage/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:StepFourViewModel}">
+            <view:StepFourPage/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:StepFiveViewModel}">
+            <view:StepFivePage/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:StepFinalViewModel}">
+            <view:StepFinalPage/>
+        </DataTemplate>
+    </Window.Resources>
+    <ContentControl Content="{Binding CurrentPage}"/>
+</Window>
