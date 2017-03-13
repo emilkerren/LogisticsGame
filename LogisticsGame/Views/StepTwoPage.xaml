@@ -10,22 +10,22 @@
     <Grid>
         <StackPanel>
             <TextBlock Text="Choose your Supplier strategy" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" />
-            <TextBlock x:Name="info" HorizontalAlignment="Left" TextWrapping="Wrap" Text="user info" VerticalAlignment="Top"/>
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding UserStats}" VerticalAlignment="Top" Margin="0,0,0,20"/>
+            <TextBlock x:Name="info" HorizontalAlignment="Left" TextWrapping="Wrap" Text="User Info" VerticalAlignment="Top" Margin="10,10,0,0" FontWeight="Bold" TextDecorations="Underline"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding UserStats}" VerticalAlignment="Top" Margin="10,10,0,0"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <StackPanel>
+                <StackPanel Margin="0, 5, 5,0">
                     <ToggleButton x:Name="BtnQuality" Content="Quality" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="89" Command="{Binding AddQualityPoints}" IsEnabled="{Binding ToogleBoolQuality}" />
                     <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="+1 time" VerticalAlignment="Top"></TextBlock>
                     <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="+1 safety" VerticalAlignment="Top"></TextBlock>
                     <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="-1 price" VerticalAlignment="Top"></TextBlock>
                 </StackPanel>
-                <StackPanel>
+                <StackPanel Margin="0, 5, 5,0">
                     <ToggleButton x:Name="BtnQuantity" Content="Quantity" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="69" Command="{Binding AddQuantityPoints}" IsEnabled="{Binding ToogleBoolQuantity}" />
                     <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="-1 time" VerticalAlignment="Top"></TextBlock>
                     <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="-1 safety" VerticalAlignment="Top"></TextBlock>
                     <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="+1 price" VerticalAlignment="Top"></TextBlock>
                 </StackPanel>
-                <StackPanel>
+                <StackPanel Margin="0, 5, 5,0">
                     <ToggleButton x:Name="BtnEfficiancy" Content="Efficiancy" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="75" Command="{Binding AddEfficiancyPoints}" IsEnabled="{Binding ToogleBoolEfficiancy}" />
                     <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="-1 time" VerticalAlignment="Top"></TextBlock>
                     <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="+1 safety" VerticalAlignment="Top"></TextBlock>
@@ -34,6 +34,6 @@
                 </StackPanel>
             </StackPanel>
         </StackPanel>
-        <Button x:Name="BtnNext" Content="Next" HorizontalAlignment="Center" VerticalAlignment="Center" Width="95" Command="{Binding NextWindow}" Margin="0,20,0,0"/>
+        <Button x:Name="BtnNext" Content="Next" HorizontalAlignment="Center" VerticalAlignment="Center" Width="95" Command="{Binding NextWindow}" Margin="0,60,0,0"/>
     </Grid>
 </UserControl>

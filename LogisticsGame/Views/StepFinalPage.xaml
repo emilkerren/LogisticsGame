@@ -9,7 +9,7 @@
     <Grid>
         <StackPanel Orientation="Vertical">
             <TextBlock Text="Here are your final stats" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold"></TextBlock>
-            <TextBlock x:Name="info" HorizontalAlignment="Center" TextWrapping="Wrap" FontSize="12" Text="user info" VerticalAlignment="Top"/>
+            <TextBlock x:Name="info" HorizontalAlignment="Center" TextWrapping="Wrap" Text="User Info" VerticalAlignment="Top" Margin="10,10,0,0" FontWeight="Bold" TextDecorations="Underline"/>
             <TextBlock x:Name="textBlock" HorizontalAlignment="Center" TextWrapping="Wrap" FontSize="14" Text="{Binding UserStats}" VerticalAlignment="Top"/>
         </StackPanel>
     </Grid>

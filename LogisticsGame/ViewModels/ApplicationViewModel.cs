@@ -1,5 +1,4 @@
 ﻿using LogisticsGame.Common;
-using LogisticsGame.Models;
 
 namespace LogisticsGame.ViewModels
 {

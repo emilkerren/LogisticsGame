@@ -9,29 +9,29 @@
     <Grid>
         <StackPanel Orientation="Vertical">
             <TextBlock Text="Choose your Inventory management" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold"></TextBlock>
-            <TextBlock x:Name="info" HorizontalAlignment="Left" TextWrapping="Wrap" Text="user info" VerticalAlignment="Top"/>
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding UserStats}" VerticalAlignment="Top"/>
+            <TextBlock x:Name="info" HorizontalAlignment="Left" TextWrapping="Wrap" Text="User Info" VerticalAlignment="Top" Margin="10,10,0,0" FontWeight="Bold" TextDecorations="Underline"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding UserStats}" VerticalAlignment="Top" Margin="10,10,0,0"/>
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                <StackPanel>
-                    <ToggleButton Content="Big Inventory" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="89" Command="{Binding AddInventoryManagemenBig}" IsEnabled="{Binding ToogleBoolInventoryManagementBig}" />
+                <StackPanel Margin="0, 5, 5, 0">
+                    <ToggleButton Content="Big Inventory" HorizontalAlignment="Left"  VerticalAlignment="Center" Command="{Binding AddInventoryManagemenBig}" IsEnabled="{Binding ToogleBoolInventoryManagementBig}" />
                     <TextBlock Text="+price"></TextBlock>
                     <TextBlock Text="+delivery"></TextBlock>
                     <TextBlock Text="+safety"></TextBlock>
                 </StackPanel>
-                <StackPanel>
-                    <ToggleButton Content="Small Inventory" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="69" Command="{Binding AddInventoryManagementSmall}" IsEnabled="{Binding ToogleBoolInventoryManagementSmall}" />
+                <StackPanel Margin="0, 5, 5, 0">
+                    <ToggleButton Content="Small Inventory" HorizontalAlignment="Left"  VerticalAlignment="Center" Command="{Binding AddInventoryManagementSmall}" IsEnabled="{Binding ToogleBoolInventoryManagementSmall}" />
                     <TextBlock Text="-price"></TextBlock>
                     <TextBlock Text="-delivery"></TextBlock>
                     <TextBlock Text="-safety"></TextBlock>
                 </StackPanel>
-                <StackPanel>
-                    <ToggleButton Content="Agile Inventory" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="69" Command="{Binding AddInventoryManagemenAgile}" IsEnabled="{Binding ToogleBoolInventoryManagementAgile}" />
+                <StackPanel Margin="0, 5, 5, 0">
+                    <ToggleButton Content="Agile Inventory" HorizontalAlignment="Left"  VerticalAlignment="Center" Command="{Binding AddInventoryManagemenAgile}" IsEnabled="{Binding ToogleBoolInventoryManagementAgile}" />
                     <TextBlock Text="?price"></TextBlock>
                     <TextBlock Text="?delivery"></TextBlock>
                     <TextBlock Text="?safety"></TextBlock>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
-        <Button Content="Next" HorizontalAlignment="Center" VerticalAlignment="Center" Width="95" Command="{Binding NextWindow}" Margin="0,20,0,0"/>
+        <Button x:Name="BtnNext" Content="Next" HorizontalAlignment="Center" VerticalAlignment="Center" Width="95" Command="{Binding NextWindow}" Margin="0,40,0,0"/>
     </Grid>
 </UserControl>

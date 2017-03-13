@@ -9,22 +9,22 @@
     <Grid>
         <StackPanel Orientation="Vertical">
             <TextBlock Text="Choose your Employee strategy" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold"></TextBlock>
-            <TextBlock x:Name="info" HorizontalAlignment="Left" TextWrapping="Wrap" Text="user info" VerticalAlignment="Top"/>
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding UserStats}" VerticalAlignment="Top"/>
+            <TextBlock x:Name="info" HorizontalAlignment="Left" TextWrapping="Wrap" Text="User Info" VerticalAlignment="Top" Margin="10,10,0,0" FontWeight="Bold" TextDecorations="Underline"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding UserStats}" VerticalAlignment="Top" Margin="10,10,0,0"/>
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                <StackPanel>
-                    <ToggleButton Content="Higly-Educated" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="89" Command="{Binding AddHighlyEducatedEmployees}" IsEnabled="{Binding ToogleBoolHiglyEducatedEmployees}" />
+                <StackPanel Margin="0, 5, 5, 0">
+                    <ToggleButton Content="Higly-Educated" HorizontalAlignment="Left"  VerticalAlignment="Center" Command="{Binding AddHighlyEducatedEmployees}" IsEnabled="{Binding ToogleBoolHiglyEducatedEmployees}" />
                     <TextBlock Text="+price"></TextBlock>
                     <TextBlock Text="+quality"></TextBlock>
                 </StackPanel>
-                <StackPanel>
-                    <ToggleButton Content="Non-Educated" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="69" Command="{Binding AddNonEducatedEmployees}" IsEnabled="{Binding ToogleBoolNonEducatedEmployees}" />
+                <StackPanel Margin="0, 5, 5, 0">
+                    <ToggleButton Content="Non-Educated" HorizontalAlignment="Left"  VerticalAlignment="Center" Command="{Binding AddNonEducatedEmployees}" IsEnabled="{Binding ToogleBoolNonEducatedEmployees}"/>
                     <TextBlock Text="-price"></TextBlock>
                     <TextBlock Text="-quality"></TextBlock>
                 </StackPanel>
                 
             </StackPanel>
         </StackPanel>
-        <Button Content="Next" HorizontalAlignment="Center" VerticalAlignment="Center" Width="95" Command="{Binding NextWindow}" Margin="0,20,0,0"/>
+        <Button x:Name="BtnNext" Content="Next" HorizontalAlignment="Center" VerticalAlignment="Center" Width="95" Command="{Binding NextWindow}" Margin="0,40,0,0"/>
     </Grid>
 </UserControl>
